@@ -1,0 +1,268 @@
+.main {
+	overflow: hidden;
+	background: rgb(2,0,36);
+	background-image: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(3,39,90,0.4) 28%, rgba(251,251,251,0.1) 100%), url(../../img/odessa-background.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	position: relative;
+    /* bottom: 72px;  */
+    height: 810px;
+    max-height: 100%;
+}
+
+.nav__logo {
+	display: none;
+}
+
+.burger {
+	display: none;
+}
+
+.header {
+	/* margin-block-start: 5%; */
+}
+
+.nav__list {
+	display: flex;
+	flex-direction: wrap;
+	justify-content: space-between;
+	/* position: relative;
+	top: 0; */
+	z-index: 2;
+	padding-inline-start: 0;
+}
+
+.logo.logo {
+	padding-block-start: 15px;
+}
+
+.nav__item {
+	padding: 62px 0;
+}
+
+.logo__items {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.logo__items img {
+	width: 56px;
+	height: 72px;
+	margin: 0 auto;
+}
+
+.logo__items>h2 {
+	color: #fff;
+}
+
+.main__header {
+	position: absolute;
+	text-align: center;
+	margin: 0 237px;
+	letter-spacing: 1.2px;
+	opacity: 1;
+    top: 269px;
+}
+
+.main__header button {
+	font-size: 18px;
+	font-weight: bold;
+	/* font: var(--unnamed-font-style-normal) normal bold 18px/100px Merriweather; */
+	text-align: center;
+	/* font: normal normal bold 18px/100px Merriweather; */
+	letter-spacing: 0.36px;
+	color: #000000;
+	opacity: 1;
+	padding: 18px 37px;
+	border-radius: 50px;
+	background: #FFC56E 0% 0% no-repeat padding-box;
+	position: relative;
+	top: 70px;
+	border-color: transparent;
+}
+
+@media (max-width: 1024px) {
+	main {
+		position: relative;
+		max-height: 600px;
+	}
+
+	.nav__item {
+   		 padding: 27px 0;
+	}
+
+	.logo.logo {
+    		padding-block-start: 0px;
+	}
+	.logo__items h2 {
+		margin-block-start: 5px;
+    	margin-block-end: 37px;
+	}
+
+	.logo__items img {
+	    width: 50px;
+	    height: 64px;
+	    position: relative;
+	    bottom: 30px;
+}
+
+	.main__header {
+		top: -11px;
+	}
+	
+	.main__header {
+   		 position: absolute;
+   		 top: 221px;
+   		 margin: 0 158px;
+    }
+
+	.main__header h1 {
+		font-size: 44px;
+		letter-spacing: 0.88px;
+		line-height: 80px;
+	}
+
+	.nav__list {
+		padding-inline-start: 50px;
+		padding-inline-end: 50px;
+}
+	.main__header button {
+		top: 0;
+	}
+}
+
+@media (max-width: 320px) {
+	.main {
+		background-position: 16% 14%;
+    	background-size: cover;
+    	overflow: hidden;
+    	background-color: black;
+	}
+
+	.main__header {
+		margin: 0 20px;
+	}
+
+	.main__header h1 {
+		font-size: 21px;
+		letter-spacing: 0.24px;
+		line-height: 37px;
+	}
+
+	.main__header button {
+		top: 110px;
+		font-size: 15px;
+		padding: 13px 21px;
+	}
+
+	.nav__logo {
+			display: block;
+			text-align: center;
+		}
+
+	.nav__logo h2 {
+		font-size: 23px;
+		color: #fff;
+	}	
+
+	.nav__logo img {
+		width: 25px;
+		height: 31px;
+	}		
+			
+	.burger {
+		display: block;
+	}
+
+	.burger{
+  		position: absolute;
+ 	 	left: 15px;
+		top: 15px;
+		width: 23px;
+		height: 50px;
+		cursor: pointer;
+	}
+
+	.burger span, .burger span:before, .burger span:after{
+		 width: 100%;
+		  position: absolute;
+		  height: 2px;
+		  background: #fff;
+		  display: block;
+		  transition: .3s;
+		  border-radius: 5px;
+	}
+
+.burger span:before {
+  content: "";
+  top: -8px;
+  transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger span {
+  top: 8px;
+}
+
+.burger span:after {
+  content: "";
+  bottom: -8px;
+  transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+	.main__active--menu {
+		z-index: 100;
+		background-position: center;
+		background-color: #03275B;
+	}
+
+	.main__active--menu--header {
+		z-index: -1;
+	}
+
+	.burger.open-menu span {
+    opacity:0; 
+    transition: 0.5s; 
+}
+.burger.open-menu:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: 0.4s;
+}
+.burger.open-menu:after {
+    transform: rotate(-38deg);
+    bottom: 16px;
+    transition: 0.4s;
+}
+
+	.logo__item h2 {
+		font-size: 18px;
+	}
+	
+	.nav__list {
+   		background-color: #03275B;
+   		display: block;
+		padding: 0;
+		margin-block-start: 138px;
+		z-index: 10;
+	}
+
+	.nav__logo {
+		position: relative;
+		z-index: 11;
+	}
+
+	.nav__item {
+    	padding: 11px 0;
+    	text-align: center;
+	}
+
+	.main {
+		background-image: none;
+	}
+
+	.logo__items {
+		display: none;
+	}
+
+	}
